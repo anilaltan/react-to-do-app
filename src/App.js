@@ -15,9 +15,9 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element={<AllToDo />} />
-        <Route path='/active' element={<ActiveTodo />} />
-        <Route path='/completed' element={<CompToDo />} />
+        <Route path='/react-to-do-app/' element={<AllToDo />} />
+        <Route path='/react-to-do-app/active' element={<ActiveTodo />} />
+        <Route path='/react-to-do-app/completed' element={<CompToDo />} />
       </Routes>
       <GlobalStyle/>
       <Footer/>
