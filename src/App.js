@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// Routing
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Components
+import Header from './components/Header';
+import AllToDo from './components/AllToDo';
+import ActiveTodo from './components/ActiveToDo';
+import CompToDo from './components/CompToDo';
+import { GlobalStyle } from './GlobalStyle';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+
+  return(
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<AllToDo />} />
+        <Route path='/active' element={<ActiveTodo />} />
+        <Route path='/completed' element={<CompToDo />} />
+      </Routes>
+      <GlobalStyle/>
+      <Footer/>
+    </Router>
+    );
+};
 
 export default App;
