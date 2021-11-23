@@ -8,7 +8,7 @@ const Header = () => {
         <Wrapper>
             <h1>#todo</h1>
             <Content>
-                <NavLink end to='/react-to-do-app/' >
+                <NavLink end to='/react-to-do-app' >
                     <button className="btn">All</button>
                 </NavLink>
                 <NavLink end to='/react-to-do-app/active'>
